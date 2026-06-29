@@ -1,0 +1,9 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MH14 Ventures mark</title>
+  <desc id="desc">A premium monogram logo for MH14 Ventures.</desc>
+  <rect x="4" y="4" width="88" height="88" rx="28" fill="#102421"/>
+  <rect x="10" y="10" width="76" height="76" rx="23" stroke="#D9C7A5" stroke-opacity="0.72" stroke-width="2"/>
+  <path d="M22 62V34H29.5L37.5 47L45.5 34H53V62H45.8V45.8L38.6 57H36.4L29.2 45.8V62H22Z" fill="#FFF7E6"/>
+  <path d="M58 62V34H65.8V44.8H74V34H81.8V62H74V51.8H65.8V62H58Z" fill="#D9C7A5"/>
+  <path d="M39 74H57" stroke="#A9824A" stroke-width="4" stroke-linecap="round"/>
+</svg>
