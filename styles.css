@@ -64,16 +64,9 @@ button { font: inherit; }
   letter-spacing: -0.02em;
 }
 
-.brand-mark {
-  width: 38px;
-  height: 38px;
-  display: inline-grid;
-  place-items: center;
-  border: 1px solid rgba(214, 194, 154, 0.45);
-  border-radius: 50%;
-  color: var(--champagne);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+.brand-mark-svg {
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .brand-text { transform: translateY(-1px); }
@@ -130,9 +123,10 @@ button { font: inherit; }
   align-items: center;
   color: var(--paper);
   background:
-    radial-gradient(circle at 86% 18%, rgba(214, 194, 154, 0.18), transparent 24rem),
-    radial-gradient(circle at 12% 76%, rgba(29, 75, 66, 0.58), transparent 32rem),
-    linear-gradient(135deg, #071815 0%, #0b201d 48%, #12342e 100%);
+    radial-gradient(ellipse at 78% 8%, rgba(214, 194, 154, 0.14) 0%, transparent 40%),
+    radial-gradient(ellipse at 6% 86%, rgba(18, 52, 46, 0.88) 0%, transparent 46%),
+    radial-gradient(ellipse at 92% 65%, rgba(7, 24, 21, 0.45) 0%, transparent 32%),
+    linear-gradient(148deg, #081a17 0%, #0d2220 38%, #112721 68%, #071815 100%);
   position: relative;
   overflow: hidden;
 }
@@ -142,11 +136,26 @@ button { font: inherit; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(248, 243, 232, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(248, 243, 232, 0.045) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.58), transparent 78%);
+    linear-gradient(rgba(248, 243, 232, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 243, 232, 0.055) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.62), transparent 74%);
   pointer-events: none;
+}
+
+.hero::after {
+  content: "14";
+  position: absolute;
+  right: -2%;
+  bottom: -2%;
+  font-size: clamp(200px, 30vw, 460px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  color: rgba(248, 243, 232, 0.028);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
 .hero-inner {
@@ -154,24 +163,81 @@ button { font: inherit; }
   z-index: 1;
 }
 
-.hero-label {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 44px;
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 52px;
+  padding: 8px 20px 8px 8px;
+  border: 1px solid rgba(248, 243, 232, 0.13);
+  border-radius: 999px;
+  background: rgba(248, 243, 232, 0.04);
 }
 
-.hero-label span {
-  display: inline-flex;
-  min-height: 36px;
+.hero-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  flex-shrink: 0;
+}
+
+.hero-badge-info {
+  display: flex;
   align-items: center;
-  padding: 0 14px;
-  border: 1px solid var(--white-line);
-  border-radius: 999px;
-  color: rgba(248, 243, 232, 0.74);
-  font-size: 0.8rem;
-  letter-spacing: 0.11em;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-badge-name {
+  color: rgba(248, 243, 232, 0.92);
+  font-size: 0.88rem;
+  font-weight: 720;
+  letter-spacing: -0.01em;
+}
+
+.hero-badge-sep {
+  color: rgba(248, 243, 232, 0.28);
+  font-size: 0.88rem;
+}
+
+.hero-badge-cat {
+  color: rgba(214, 194, 154, 0.76);
+  font-size: 0.76rem;
+  font-weight: 680;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.hero-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.rule-line {
+  display: block;
+  width: 52px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(214, 194, 154, 0.6), transparent);
+}
+
+.rule-line--short {
+  width: 22px;
+}
+
+.rule-gem {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 1px solid rgba(214, 194, 154, 0.55);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.h1-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(214, 194, 154, 0.62);
 }
 
 .hero-content {
@@ -582,7 +648,7 @@ p {
 }
 
 .footer p { color: rgba(248, 243, 232, 0.56); font-size: 0.94rem; }
-.footer-brand .brand-mark { width: 34px; height: 34px; }
+.footer-brand .brand-mark-svg { width: 32px; height: 32px; }
 
 .reveal {
   opacity: 0;
@@ -627,7 +693,9 @@ p {
   .nav-cta { text-align: center; }
   .hero { padding-top: 112px; }
   h1 { font-size: clamp(3.3rem, 17vw, 5.4rem); }
-  .hero-label { margin-bottom: 28px; }
+  .hero-badge { margin-bottom: 36px; }
+  .hero-badge-cat { display: none; }
+  .h1-outline { -webkit-text-stroke-width: 1.5px; }
   .founder-card { grid-template-columns: 1fr; }
   .workflow-list div { grid-template-columns: 42px 1fr; padding: 20px 22px; }
   .panel-head { padding: 24px; }

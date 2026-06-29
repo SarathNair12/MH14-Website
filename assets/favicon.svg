@@ -1,5 +1,27 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="18" fill="#102421"/>
-  <path d="M13 42V22H18.5L24 31.5L29.5 22H35V42H29.5V30.5L25 38H23L18.5 30.5V42H13Z" fill="#FFF7E6"/>
-  <path d="M39 42V22H45V29H51V22H57V42H51V34.5H45V42H39Z" fill="#D9C7A5"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#112520"/>
+      <stop offset="100%" stop-color="#071815"/>
+    </linearGradient>
+    <linearGradient id="fborder" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D6C29A" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#9A7840" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="16" fill="url(#fbg)"/>
+  <rect x="3" y="3" width="58" height="58" rx="13.5" stroke="url(#fborder)" stroke-width="0.8"/>
+
+  <!-- Corner ticks -->
+  <path d="M6,13 L6,6 L13,6" stroke="#D6C29A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" fill="none"/>
+  <path d="M51,6 L58,6 L58,13" stroke="#D6C29A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" fill="none"/>
+  <path d="M6,51 L6,58 L13,58" stroke="#D6C29A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" fill="none"/>
+  <path d="M51,58 L58,58 L58,51" stroke="#D6C29A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" fill="none"/>
+
+  <!-- M letterform -->
+  <path d="M6,35 L6,12 L11,12 L18,25 L26,12 L30,12 L30,35 L26,35 L26,22 L18,31 L11,22 L11,35 Z" fill="#F5EDD8"/>
+
+  <!-- H letterform -->
+  <path d="M34,35 L34,12 L38,12 L38,22 L53,22 L53,12 L58,12 L58,35 L53,35 L53,27 L38,27 L38,35 Z" fill="#D6C29A"/>
 </svg>
